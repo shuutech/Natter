@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+
+        "file:///C:/NotBackedUp/jars/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/natter</property>
+
+        <property name="hibernate.connection.username">root</property>
+
+        <property name="hibernate.connection.password">anz</property>
+
+        <property name="hibernate.connection.pool_size">5</property>
+
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!--Shows all the SQL commands executed in the stdout-->
+        <property name="hibernate.show_sql">true</property>
+        <!--When the value is set to create it creates a new table in the database every time the application starts.
+        The old data will be lost. When the value is set to update, the existing data is updated. There is also an
+	   option to use create-drop. This will drop the tables everytime the application ends-->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--Each DBMS has its own dialect that it understands based on its version
+        We will use MySQL8Dialect to communicate to our DBMS-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!--List of all the classes the objects of which we want to persist-->
+        <mapping class="com.company.User"/>
+        <mapping class="com.company.UserFriend"/>
+        <mapping class="com.company.Activity"/>
+
+    </session-factory>
+
+</hibernate-configuration>

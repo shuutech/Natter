@@ -1,8 +1,9 @@
 package com.company;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import com.company.enums.FriendStatus;
+import com.company.managers.ActivityManager;
+import com.company.managers.FriendManager;
+
 import java.util.Scanner;
 
 import static com.company.ShuCommonUtils.check;
@@ -61,7 +62,7 @@ public class Main {
                     break;
                 case "3"://Select all friends
 
-                    System.out.println(new FriendManager().viewFriend(username));
+                    System.out.println(new FriendManager().viewFriend(username,password));
                     run = check(run);
                     break;
                 case "4"://Add Friend
@@ -69,7 +70,7 @@ public class Main {
                     System.out.println("Enter username of friend you want to add: ");
                     String friendname = scanner.nextLine();
 
-                    new FriendManager().addFriendToDB(username,friendname,FriendStatus.REQUESTED.friendStatus);
+                    new FriendManager().addFriendToDB(username,password,friendname, FriendStatus.REQUESTED.friendStatus);
                     run = check(run);
                    break;
               case "5":// View Activities

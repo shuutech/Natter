@@ -7,57 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ebf84e-ae3b-4735-8dca-b21846552a3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/OfflineLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/SimpleChatClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/VerySimpleChatServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/exceptions/NotValidLoginException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/interfaces/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/managers/ActivityManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/objects/Friend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/com/company/ActivityManagerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/com/company/FriendManagerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/com/company/UserManagerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/com/company/UserTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/Activity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/ActivityManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/ActivityStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/AddActivityServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/AddFriendServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/CreateUserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/DBManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/FriendManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/FriendStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Natter/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/OfflineLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Natter/com/company/OfflineLogin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/UserFriend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/UserManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/ViewActivityServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/ViewFriendServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Natter/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Natter/com/company/UserManagerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/objects/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ActivityManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ActivityStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enums/ActivityStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/AddActivityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/AddActivityServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/AddFriendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/AddFriendServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/CreateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/CreateUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/managers/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FriendManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/managers/FriendManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FriendStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enums/FriendStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/objects/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/UserFriend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/objects/UserFriend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/managers/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ViewActivityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/ViewActivityServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ViewFriendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/ViewFriendServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/com/company/UserManagerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/com/company/UserTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -252,6 +202,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -416,7 +367,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/NotBackedUp/PersonalProject/Natter/src/com/company/SimpleChatClient.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543358004049" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543358489036" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -566,16 +517,17 @@
       <option name="project" value="LOCAL" />
       <updated>1542865903266</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first UserManager">
+      <created>1543358335583</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543358335583</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FriendManagerTests_viewFriendsWithoutLogOn - 2018.11.27 at 10h 50m 50s.xml">
-      <configuration name="FriendManagerTests.viewFriendsWithoutLogOn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FriendManagerTests_viewFriendsWithoutLogOn - 2018.11.27 at 11h 02m 55s.xml">
-      <configuration name="FriendManagerTests.viewFriendsWithoutLogOn" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FriendManagerTests_viewFriendsWithoutLogOn - 2018.11.27 at 16h 28m 40s.xml">
       <configuration name="FriendManagerTests.viewFriendsWithoutLogOn" configurationId="JUnit" />
     </history-entry>
@@ -600,10 +552,15 @@
     <history-entry file="FriendManagerTests_viewFriendsWithoutLogOn - 2018.11.27 at 16h 43m 09s.xml">
       <configuration name="FriendManagerTests.viewFriendsWithoutLogOn" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="FriendManagerTests_viewFriendsWithoutLogOn - 2018.11.28 at 09h 32m 33s.xml">
+      <configuration name="FriendManagerTests.viewFriendsWithoutLogOn" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FriendManagerTests_viewFriendsWithoutLogOn - 2018.11.28 at 09h 33m 35s.xml">
+      <configuration name="FriendManagerTests.viewFriendsWithoutLogOn" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />

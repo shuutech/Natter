@@ -1,42 +1,60 @@
 package com.company.managers;
 
+import com.company.exceptions.NotValidLoginException;
+import com.company.exceptions.NotValidUserException;
 import com.company.interfaces.Login;
 import com.company.objects.User;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 public class UserManager extends Manager implements Login {
-    public boolean isUserLoggedOn(String username, String password) {
+    public boolean isUserLoggedOn(String username, String password) throws NotValidLoginException {
+        boolean loggedOn = false;
         SessionFactory sessionFactory = super.getSessionFactory();
         Session session = sessionFactory.openSession();
-        com.company.objects.User user = session.get(com.company.objects.User.class, username);
-        if (user != null && user.getPassword().equals(password)) {
-            return true;
-        } else {
-            return false;
+
+        try {
+            session.get(User.class, username);}
+        catch (Exception e)
+        { throw new NotValidLoginException("Please enter username");
         }
+        User user = session.get(User.class, username);
+            if (user != null && user.getPassword().equals(password)) {
+                loggedOn = true;
+            }
+
+            else if (password == null) {
+                loggedOn = false;
+                throw new NotValidLoginException("Username or password is incorrect");
+            }
+            else {
+                loggedOn = false;
+                throw new NotValidLoginException("Username or password is incorrect");
+
+            }
+        return loggedOn;
     }
 
-    public User getUser(String username) {
+    public User getUser(String username) throws NotValidUserException  {
         SessionFactory sessionFactory = super.getSessionFactory();
         Session session = sessionFactory.openSession();
-        User user= null;
-
-        try{
+        User user = new User();
+        try {
             user = session.get(User.class, username);
-            if (user.equals(null)){
-                throw new Exception();
-            }
+        } catch (Exception h) {
+            user=null;
         }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+           if (user==null){
+               throw new NotValidUserException(username + " does not exist");
+           }
 
         return user;
     }
 
-    User user = new User();
+
     public void addUserToDB(String username, String password, String firstName, String lastName, String email, String phoneNumber,String location) throws Exception{
+        User user = new User();
         user.setUserName(username);
         user.setPassword(password);
         user.setFirstName(firstName);

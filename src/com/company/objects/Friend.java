@@ -1,6 +1,7 @@
 package com.company.objects;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Friend {
     String friendUserName;
@@ -9,17 +10,28 @@ public class Friend {
     String friendEmail;
     String status;
 
+    public String getCurrentUserName() {
+        return currentUserName;
+    }
+
+    public void setCurrentUserName(String currentUserName) {
+        this.currentUserName = currentUserName;
+    }
+
+    String currentUserName;
+
 
     public Friend() {
 
     }
 
-    public Friend(String friendUserName, String friendFirstName, String friendLastName, String friendEmail, String status) {
+    public Friend(String friendUserName, String friendFirstName, String friendLastName, String friendEmail, String status, String currentUserName) {
         this.friendUserName = friendUserName;
         this.friendFirstName = friendFirstName;
         this.friendLastName = friendLastName;
         this.friendEmail = friendEmail;
         this.status = status;
+        this.currentUserName = currentUserName;
     }
 
     public String getFriendUserName() {
@@ -60,6 +72,17 @@ public class Friend {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Friend that = (Friend) o;
+        return Objects.equals(friendUserName, that.friendUserName) &&
+                Objects.equals(friendFirstName, that.friendFirstName) &&
+                Objects.equals(friendLastName, that.friendLastName) &&
+                Objects.equals(friendEmail, that.friendEmail) &&
+                Objects.equals(status, that.status);
     }
 
 

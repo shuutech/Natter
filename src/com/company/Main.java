@@ -1,37 +1,35 @@
 package com.company;
-
-import com.company.enums.FriendStatus;
 import com.company.managers.ActivityManager;
 import com.company.managers.FriendManager;
+import com.company.offline.OfflineMethods;
 
 import java.util.Scanner;
-
 import static com.company.ShuCommonUtils.check;
 
 
 public class Main {
-   static String username;
-    static String password;
-    static String firstName;
-    static String lastName;
-    static String email;
-    static String phoneNumber;
-    static String location;
-
 
     public static void main(String[] args) throws Exception {
+         String username=null;
+         String password=null;
+         String firstName=null;
+         String lastName=null;
+         String email=null;
+         String phoneNumber=null;
+         String location=null;
+         String friendname=null;
 
-        ShuCommonUtils shuCommonUtils = new ShuCommonUtils();
         Scanner scanner = new Scanner(System.in);
         Boolean run = true;
 
         while (run) {
-            System.out.println("1. Login " +
-                    "\n2. Create New User " +
-                    "\n3. View Friends " +
-                    "\n4. Add Friends " +
-                    "\n5. View Activity  " +
-                    "\n6. Start Activity "
+            System.out.println("Enter number 1 & Press Enter to - Login " +
+                    "\nEnter number 2 & Press Enter to - Create New User " +
+                    "\nEnter number 3 & Press Enter to - View Friends " +
+                    "\nEnter number 4 & Press Enter to - Friend Request " +
+                    "\nEnter number 5 & Press Enter to - Add a Friend " +
+                    "\nEnter number 6 & Press Enter to - View Activity  " +
+                    "\nEnter number 7 & Press Enter to - Start Activity "
             );
             switch (scanner.nextLine()) {
                 case "1"://Login
@@ -61,48 +59,43 @@ public class Main {
                    run = check(run);
                     break;
                 case "3"://Select all friends
-
-                    System.out.println(new FriendManager().viewFriend(username,password));
+                   new OfflineMethods().displayFriends( username,  password);
                     run = check(run);
                     break;
-                case "4"://Add Friend
+                case "4"://Friend Request
 
-                    System.out.println("Enter username of friend you want to add: ");
-                    String friendname = scanner.nextLine();
+                    System.out.println("Enter username of friend to request as a friend: ");
+                     friendname = scanner.nextLine();
 
-                    new FriendManager().addFriendToDB(username,password,friendname, FriendStatus.REQUESTED.friendStatus);
+                 new FriendManager().addOrUpdateFriend(username,password,friendname);
                     run = check(run);
                    break;
-              case "5":// View Activities
+                case "5"://Add Friend
+
+                    System.out.println(new FriendManager().viewFriendRequests(username,password));
+
+                    System.out.println("Enter username of friend you want to add: ");
+                    friendname = scanner.nextLine();
+
+                  new FriendManager().addOrUpdateFriend(username,password,friendname);
+                    run = check(run);
+                    break;
+              case "6":// View Activities
                   new ActivityManager().viewAvailableActivity(username);
 
                     run = check(run);
                     break;
-             case "6"://Create New Activity
+             case "7"://Create New Activity
                     System.out.println("Enter Activity Name");
                     String activityName = scanner.nextLine();
                  new ActivityManager().joinActivity(username,activityName);
                     run = check(run);
                     break;
-//                case "7"://Update the stock level of a given product
-//                    System.out.println("Update stock levels for (product id)?");
-//                    product_id = Integer.parseInt(scanner.nextLine());
-//                    productManager.updateStockLevel(c, product_id);
-//                    run = check(run);
-//                    break;
-//                case "8"://Delete a given produc
-//                    productManager.deleteProduct(c);
-//                    run = check(run);
-//                    break;
-//                case "9"://Print the name and price for all product records.
-//                    productManager.retrieveNamePrice(c);
-//
-//                    run = check(run);
-//                    break;
                 case "N":
                     run = false;
             }
         }
+        System.exit(0);
     }
 
 

@@ -1,109 +1,183 @@
 package com.company.managers;
 
+import com.company.enums.FriendStatus;
 import com.company.exceptions.NotValidLoginException;
+import com.company.exceptions.NotValidUserException;
 import com.company.interfaces.Login;
 import com.company.objects.Friend;
 import com.company.objects.User;
 import com.company.objects.UserFriend;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import com.company.validations.FriendValidations;
+import org.hibernate.*;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class FriendManager extends Manager implements Login {
-    boolean loggedOn = false;
-    UserFriend friend = new UserFriend();
 
-    public boolean isUserLoggedOn(String username, String password) {
-        SessionFactory sessionFactory = super.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        User user = session.get(User.class, username);
-        if (user != null && user.getPassword().equals(password)) {
-            return loggedOn = true;
-        } else {
-            return loggedOn = false;
-        }
+    public boolean isUserLoggedOn(String username, String password) throws NotValidLoginException {
+        boolean loggedOn = new UserManager().isUserLoggedOn(username, password);
+        return loggedOn;
     }
 
-    public User getUser(String username) {
-        SessionFactory sessionFactory = super.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        User user = null;
-
-        try {
-            user = session.get(User.class, username);
-            if (user.equals(null)) {
-                throw new Exception();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+    public User getUser(String username) throws NotValidUserException {
+        User user = new UserManager().getUser(username);
         return user;
     }
 
 
-    public void addFriendToDB(String currentUserName, String password, String friendUserName, String status) {
-        try {
-            loggedOn = isUserLoggedOn(currentUserName, password);
-            if (loggedOn) {
-                addFriend(currentUserName, friendUserName, status);
+    public void addOrUpdateFriend(String currentUserName, String password, String friendUserName) throws NotValidLoginException, NotValidUserException {
+
+        boolean loggedOn = false;
+        FriendValidations friendValidations = new FriendValidations();
+        loggedOn = isUserLoggedOn(currentUserName, password);
+        String status;
+        if (loggedOn) {
+            if (friendValidations.getFriendRecord(currentUserName, friendUserName) == null) {
+                createNewFriendRecord(currentUserName, friendUserName);
             } else {
-                throw new NotValidLoginException("User not logged on");
+                ArrayList<Friend> friend = friendValidations.getFriendRecord(currentUserName, friendUserName);
+                for (Friend f : friend) {
+                    if (currentUserName.equals(f.getCurrentUserName())) {
+                        status = friendValidations.updateUserRecord(f.getCurrentUserName(), f.getFriendUserName());
+                        updateFriendStatus(f.getCurrentUserName(), f.getFriendUserName(), status);
+                    } else if (!currentUserName.equals(f.getCurrentUserName())) {
+                        status = friendValidations.updateFriendRecord(f.getCurrentUserName(), f.getFriendUserName());
+                        updateFriendStatus(f.getCurrentUserName(), f.getFriendUserName(), status);
+                    }
+                }
+
             }
-        } catch (NotValidLoginException e) {
-            e.getMessage();
+
+
+        } else {
+            throw new NotValidLoginException("User not logged on");
         }
 
     }
 
-    public void addFriend(String currentUserName, String friendUserName, String status) {
-        User currentUser = getUser(currentUserName);
-        User friendUser = new UserManager().getUser(friendUserName);
-        friend.setCurrentUser(currentUser);
-        friend.setFriendUser(friendUser);
-        friend.setStatus(status);
 
+    public void createNewFriendRecord(String currentUserName, String friendUserName) throws NotValidUserException {
+        /*
+        This method adds a new friend record where one does not exist.
+        Since this is a new record, the default status of "Friend Requested" is updated to the record.
+         */
+        FriendValidations friendValidations = new FriendValidations();
+        if (friendValidations.checkUserExists(friendUserName)) {
+            User currentUser = getUser(currentUserName);
+            User friendUser = getUser(friendUserName);
+            UserFriend friend = new UserFriend();
+            friend.setCurrentUser(currentUser);
+            friend.setFriendUser(friendUser);
+            friend.setStatus(FriendStatus.REQUESTED.friendStatus);
+
+            SessionFactory sessionFactory = super.getSessionFactory();
+            Session session = sessionFactory.openSession();
+            //Begins a transaction
+            session.beginTransaction();
+
+            session.saveOrUpdate(friend);
+            // session.save(user);
+            //Commits the transaction in the DB
+            session.getTransaction().commit();
+            //  System.exit(0);
+            session.close();
+        }
+
+
+    }
+
+    public void updateFriendStatus(String currentUserName, String friendUserName, String status) throws NotValidUserException {
+
+        FriendValidations friendValidations = new FriendValidations();
+        if (friendValidations.checkUserExists(friendUserName)) {
+            SessionFactory sessionFactory = super.getSessionFactory();
+            Session session = sessionFactory.openSession();
+            List<UserFriend> list = session
+                    .createQuery(
+                            " from UserFriend " +
+                                    "where currentUser.userName =(:currentUser) AND friendUser.userName=(:friendUser) ")
+                    .setParameter("currentUser", currentUserName)
+                    .setParameter("friendUser", friendUserName)
+                    .getResultList();
+            for (UserFriend userFriend : list) {
+                userFriend.setStatus(status);
+                //Begins a transaction
+                session.beginTransaction();
+                //Saves the Customer789 object in the DB
+                session.update(userFriend);
+                // session.save(user);
+                //Commits the transaction in the DB
+                session.getTransaction().commit();
+                //  System.exit(0);
+
+            }
+            session.close();
+        }
+
+    }
+
+
+    public void deleteFriend(String currentUserName, String friendUserName){
         SessionFactory sessionFactory = super.getSessionFactory();
         Session session = sessionFactory.openSession();
-        //Begins a transaction
-        session.beginTransaction();
-        //Saves the Customer789 object in the DB
-        session.saveOrUpdate(friend);
-        // session.save(user);
-        //Commits the transaction in the DB
-        session.getTransaction().commit();
-        //  System.exit(0);
+
+        List<UserFriend> uf = session
+                .createQuery(
+                        " from UserFriend " +
+                                "where currentUser.userName =(:currentUser) AND friendUser.userName=(:friendUser) ")
+                .setParameter("currentUser", currentUserName)
+                .setParameter("friendUser", friendUserName)
+                .getResultList();
+        for (UserFriend userFriend : uf) {
+            userFriend.setStatus(FriendStatus.DELETED.friendStatus);
+            //Begins a transaction
+            session.beginTransaction();
+            //Saves the Customer789 object in the DB
+            session.update(userFriend);
+            // session.save(user);
+            //Commits the transaction in the DB
+            session.getTransaction().commit();
+            //  System.exit(0);
+
+        }
         session.close();
 
 
     }
 
-    public ArrayList viewFriend(String currentUser, String password) {
+    public ArrayList viewFriend(String currentUser, String password) throws NotValidLoginException {
+        boolean loggedOn = false;
+        ArrayList friend = new ArrayList<>();
 
-        try {
-            loggedOn = isUserLoggedOn(currentUser, password);
-            if (loggedOn) {
-                return friends(currentUser);
-            } else {
-                throw new NotValidLoginException("User not logged on");
-            }
-        } catch (NotValidLoginException e) {
-            e.getMessage();
+        loggedOn = isUserLoggedOn(currentUser, password);
+        if (loggedOn) {
+            friend = friends(currentUser);
+        } else {
+            throw new NotValidLoginException(currentUser + " is not logged on");
         }
-        return null;
+
+        return friend;
 
     }
 
-    public ArrayList friends(String currentUser){
-      // Hashtable<String, Friend> friendHashMap = new Hashtable<>();
-    // Hashtable<User,String> friendMap = new Hashtable<>();
+    public ArrayList viewFriendRequests(String currentUser, String password) throws NotValidLoginException {
+        boolean loggedOn = false;
+        ArrayList friend = new ArrayList<>();
 
-        ArrayList<Friend> friendArray= new ArrayList<>();
+        loggedOn = isUserLoggedOn(currentUser, password);
+        if (loggedOn) {
+            friend = viewFriendsToAdd(currentUser);
+        } else {
+            throw new NotValidLoginException(currentUser + " is not logged on");
+        }
+
+        return friend;
+
+    }
+
+    public ArrayList friends(String currentUser) {
+
+        ArrayList<Friend> friendArray = new ArrayList<>();
         String output = "";
 
         SessionFactory sessionFactory = super.getSessionFactory();
@@ -111,7 +185,7 @@ public class FriendManager extends Manager implements Login {
         List<com.company.objects.UserFriend> list = session
                 .createQuery(
                         "from UserFriend " +
-                                "where status like '%Friend Requested%' AND currentUser.userName =(:currentUser)")
+                                "where currentUser.userName =(:currentUser)")
                 .setParameter("currentUser", currentUser)
                 .getResultList();
         list.forEach((UserFriend userFriend) ->
@@ -121,7 +195,8 @@ public class FriendManager extends Manager implements Login {
             String friendLastName = userFriend.getFriendUser().getLastName();
             String friendEmail = userFriend.getFriendUser().getEmail();
             String status = userFriend.getStatus();
-            Friend friend = new Friend(friendUserName,friendFirstName, friendLastName,friendEmail,status);
+            String currentUserName = userFriend.getCurrentUser().getUserName();
+            Friend friend = new Friend(friendUserName, friendFirstName, friendLastName, friendEmail, status, currentUserName);
 
             friendArray.add(friend);
 
@@ -129,7 +204,40 @@ public class FriendManager extends Manager implements Login {
         return friendArray;
     }
 
-    public String backup(String currentUser){
+    public ArrayList viewFriendsToAdd(String currentUser) {
+
+        ArrayList<Friend> friendArray = new ArrayList<>();
+        String output = "";
+
+        SessionFactory sessionFactory = super.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        List<UserFriend> list = session
+                .createQuery(
+                        "from UserFriend " +
+                                "where friendUser.userName =(:currentUser) AND status=(:status)")
+                .setParameter("currentUser", currentUser)
+                .setParameter("status", FriendStatus.REQUESTED.friendStatus)
+                .getResultList();
+        list.forEach((UserFriend userFriend) ->
+        {
+            /*
+            As we are searching through the friend user column for the user and getting the Current user,
+             */
+            String currentUserName = userFriend.getFriendUser().getUserName();
+            String friendUserName = userFriend.getCurrentUser().getUserName();
+            String friendFirstName = userFriend.getCurrentUser().getFirstName();
+            String friendLastName = userFriend.getCurrentUser().getLastName();
+            String friendEmail = userFriend.getCurrentUser().getEmail();
+            String getStatus = userFriend.getStatus();
+            Friend friend = new Friend(friendUserName, friendFirstName, friendLastName, friendEmail, getStatus, currentUserName);
+
+            friendArray.add(friend);
+
+        });
+        return friendArray;
+    }
+
+    public String backup(String currentUser) {
         String output;
         ArrayList<String> buildString = new ArrayList<>();
         String start = "<table><thead>" +

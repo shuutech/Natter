@@ -81,7 +81,7 @@ public class AddFriendServlet extends HttpServlet implements Login {
                 friendUser = request.getParameter("friend");
                 try {
                     if (isUserLoggedOn( currentUser, password)) {
-                        new FriendManager().addFriendToDB(currentUser, password, friendUser, FriendStatus.REQUESTED.friendStatus);
+                    //    new FriendManager().updateFriend(currentUser, password, friendUser, FriendStatus.REQUESTED.friendStatus);
                     }} catch (Exception e) {
                     out.println("Friend does not exist");
                     continueAdding = false;

@@ -122,20 +122,17 @@ public class User {
         activityLists.add(activityName);
     }
 
-
-
-
     @Override
     public String toString() {
-        return "User{" +
-                "userName='" + userName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", userLocation='" + userLocation + '\'' +
-                ", password='" + password + '\'' +
-                ", activityLists=" + activityLists +
+        return "{" +
+                "\"userName\":\"" + userName + '\"' +
+                ", \"firstName\":\"" + firstName + '\"' +
+                ", \"lastName\":\"" + lastName + '\"' +
+                ", \"email\":\"" + email + '\"' +
+                ", \"phoneNumber\":\"" + phoneNumber + '\"' +
+                ", \"userLocation\":\"" + userLocation + '\"' +
+                ", \"password\":\"" + password + '\"' +
+                ", \"activityLists\":\"" + activityLists + '\"' +
                 '}';
     }
 }

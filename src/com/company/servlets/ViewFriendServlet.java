@@ -76,8 +76,8 @@ public class ViewFriendServlet extends HttpServlet implements Login {
 
 
         } catch (
-                IOException io) {
-            System.out.println("IO Exception --  " + io.getMessage());
+                Exception e) {
+            System.out.println("IO Exception --  " + e.getMessage());
         }
     }
 

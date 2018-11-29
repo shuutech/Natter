@@ -35,8 +35,8 @@ public class LoginServlet extends HttpServlet {
                 response.getWriter().print("Not matching");
             }
 
-        } catch (IOException io) {
-            System.out.println("IO Exception --  "+io.getMessage());
+        } catch (Exception e) {
+            System.out.println("IO Exception --  "+e.getMessage());
         }
 
     }

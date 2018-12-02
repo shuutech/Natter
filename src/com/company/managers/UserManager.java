@@ -14,10 +14,11 @@ public class UserManager extends Manager implements Login {
         SessionFactory sessionFactory = super.getSessionFactory();
         Session session = sessionFactory.openSession();
 
+
         try {
             session.get(User.class, username);}
         catch (Exception e)
-        { throw new NotValidLoginException("Please enter username");
+        { throw new NotValidLoginException("You must log in first!");
         }
         User user = session.get(User.class, username);
             if (user != null && user.getPassword().equals(password)) {
@@ -33,6 +34,7 @@ public class UserManager extends Manager implements Login {
                 throw new NotValidLoginException("Username or password is incorrect");
 
             }
+        session.close();
         return loggedOn;
     }
 
@@ -48,7 +50,7 @@ public class UserManager extends Manager implements Login {
            if (user==null){
                throw new NotValidUserException(username + " does not exist");
            }
-
+session.close();
         return user;
     }
 

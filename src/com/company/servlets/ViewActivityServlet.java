@@ -1,7 +1,9 @@
 package com.company.servlets;
 
+import com.company.enums.FriendStatus;
 import com.company.exceptions.NotValidLoginException;
 import com.company.managers.FriendManager;
+import com.company.offline.OfflineMethods;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +45,8 @@ public class ViewActivityServlet extends HttpServlet {
 
             currentUser = getCurrent(request);
             password = getCurrentPassword(request);
-            friends = new FriendManager().viewFriend(currentUser, password);
+           friends = null;
+                   //new OfflineMethods().displayFriendsOfCurrentUser( currentUser,password , FriendStatus.REQUESTED.friendStatus)
 
 
             out.println("<HTML><HEAD><TITLE>Hello World!</TITLE>" +

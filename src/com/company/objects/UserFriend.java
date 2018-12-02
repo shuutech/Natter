@@ -1,8 +1,13 @@
 package com.company.objects;
 
+import com.company.managers.Manager;
+import org.hibernate.Session;
 import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class UserFriend {
@@ -11,19 +16,22 @@ public class UserFriend {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @ManyToOne
+    @ManyToOne (targetEntity = User.class)
     @JoinColumn(name="friendUserName", referencedColumnName = "username")
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private User friendUser;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name="currentUserName", referencedColumnName = "username")
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private User currentUser;
 
     private String status;
 
-    //private ArrayList<String> activityLists;
+    @ManyToMany (fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+  //  @Cascade({org.hibernate.annotations.CascadeType.ALL, })
+   // @JoinColumn (Fetch = FetchType.EAGER)
+    private List<User> user = new ArrayList<>();
 
     public User getFriendUser() {
         return friendUser;
@@ -51,6 +59,14 @@ public class UserFriend {
     public UserFriend() {
 
     }
+    public List<UserFriend> getResultList(Session session){
+        List<UserFriend> list = session
+                .createQuery("from UserFriend ")
+                .getResultList();
+        return list;
+    }
+
+
 
 
 

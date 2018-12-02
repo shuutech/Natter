@@ -13,11 +13,36 @@ public class Manager {
         sessionFactory = configuration.buildSessionFactory();
     }
 
-    public static SessionFactory getSessionFactory() {
+    public SessionFactory getSessionFactory() {
         if(sessionFactory == null)
             setupSessionFactory();
         return sessionFactory;
     }
+
+    public Session openSession(){
+        Session session = getSessionFactory().openSession();
+        return session;
+    }
+
+    public void beginTransaction(){
+        openSession().beginTransaction();
+    }
+
+    public void saveOrUpdate(Object obj){
+        Session session = openSession();
+        session.beginTransaction();
+        session.saveOrUpdate(obj);
+        session.getTransaction().commit();
+        session.close();
+    }
+
+    public void update(Session session, Object obj){
+        session.beginTransaction();
+        session.update(obj);
+        session.getTransaction().commit();
+    }
+
+
 
 
 

@@ -23,7 +23,7 @@ public class AddFriendServlet extends HttpServlet implements Login {
 
 
     public boolean isUserLoggedOn(String username, String password) {
-        SessionFactory sessionFactory = Manager.getSessionFactory();
+        SessionFactory sessionFactory = new Manager().getSessionFactory();
         Session session = sessionFactory.openSession();
         User user = session.get(User.class, username);
         if (user != null && user.getPassword().equals(password)) {
@@ -34,7 +34,7 @@ public class AddFriendServlet extends HttpServlet implements Login {
     }
 
     public User getUser(String username)  {
-        SessionFactory sessionFactory = Manager.getSessionFactory();
+        SessionFactory sessionFactory = new Manager().getSessionFactory();
         Session session = sessionFactory.openSession();
         User user= null;
 

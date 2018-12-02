@@ -13,6 +13,7 @@ public class AddActivityServlet extends HttpServlet {
 
     String currentUser;
     String activityName;
+    String password;
     Boolean exists;
     ActivityManager activityManager = new ActivityManager();
 
@@ -36,7 +37,7 @@ public class AddActivityServlet extends HttpServlet {
             currentUser = getCurrent(request);
             activityName = request.getParameter("activity");
             try{
-            activityManager.joinActivity(currentUser, activityName);}
+            activityManager.createActivity(currentUser, activityName, password);}
             catch (Exception e){
                 out.println("User does not exist, please enter another user");
 

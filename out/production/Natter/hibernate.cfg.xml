@@ -36,7 +36,8 @@
         <!--List of all the classes the objects of which we want to persist-->
         <mapping class="com.company.objects.User"/>
         <mapping class="com.company.objects.UserFriend"/>
-        <mapping class="com.company.objects.Activity"/>
+
+
 
     </session-factory>
 

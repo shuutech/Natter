@@ -1,8 +1,6 @@
 package com.company.validations;
-
-import com.company.UserManager;
 import com.company.enums.FriendStatus;
-import com.company.exceptions.NotValidFriendException;
+import com.company.exceptions.NotValidLoginException;
 import com.company.exceptions.NotValidUserException;
 import com.company.managers.FriendManager;
 import com.company.objects.Friend;
@@ -21,7 +19,7 @@ public class FriendValidations {
         return pass;
     }
 
-    public String getFriendStatus(String currentUserName, String friendUserName) {
+    public String getFriendStatus(String currentUserName, String friendUserName)  {
         String status = null;
         ArrayList<Friend> friend = new FriendManager().friends(currentUserName);
         for (Friend f : friend) {
@@ -32,7 +30,7 @@ public class FriendValidations {
         return status;
     }
 
-    public ArrayList getFriendRecord(String currentUserName, String friendUserName) {
+    public ArrayList getFriendRecord(String currentUserName, String friendUserName)  {
         //check if a friend record of the user and friend already exists
         ArrayList<Friend> userHasFriend = new FriendManager().friends(currentUserName);
         ArrayList<Friend> record = new ArrayList<>();
@@ -52,8 +50,8 @@ public class FriendValidations {
         return null;
     }
 
-    public String updateFriendRecord(String friendUserName,String currentUserName)  {
-        String status = getFriendStatus(friendUserName, currentUserName);
+    public String updateFriendRecord(String currentUserName,String friendUserName)   {
+        String status = getFriendStatus(currentUserName, friendUserName);
 
 
         if (status==null) {
@@ -112,14 +110,6 @@ public class FriendValidations {
         }
         return status;
     }
-
-
-
-
-    //check if current user/friend user or friend user/current user is already a friend. If true then error.
-
-    //check if current user/friend user or friend user/current user has friend deleted. If true then set status to friend rquested
-
 }
 
 

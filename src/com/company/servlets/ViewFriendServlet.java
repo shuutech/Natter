@@ -21,7 +21,7 @@ public class ViewFriendServlet extends HttpServlet implements Login {
     String password;
 
     public boolean isUserLoggedOn(String username, String password) {
-        SessionFactory sessionFactory = Manager.getSessionFactory();
+        SessionFactory sessionFactory = new Manager().getSessionFactory();
         Session session = sessionFactory.openSession();
         User user = session.get(User.class, username);
         if (user != null && user.getPassword().equals(password)) {
@@ -61,7 +61,7 @@ public class ViewFriendServlet extends HttpServlet implements Login {
 
             try {
                 if (isUserLoggedOn( currentUser, password)) {
-                    new FriendManager().viewFriend(currentUser,password);
+                  //  new FriendManager().viewFriend(currentUser,password);
                 }} catch (Exception e) {
                 out.println("User Not logged on");
 
@@ -71,7 +71,7 @@ public class ViewFriendServlet extends HttpServlet implements Login {
             out.println("<HTML><HEAD><TITLE>Hello World!</TITLE>" +
                     "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\"/>" +
                     "</HEAD><BODY><h2 class = \"bio room\">View Friends</h2>" +
-                    new FriendManager().viewFriend(currentUser,password)  + "</BODY></HTML>");
+                    new FriendManager().friends(currentUser)  + "</BODY></HTML>");
             out.close();
 
 

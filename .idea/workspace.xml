@@ -7,27 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ebf84e-ae3b-4735-8dca-b21846552a3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/exceptions/NotValidFriendException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/exceptions/NotValidUserException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/offline/OfflineMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/validations/FriendValidations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/validations/ActivityValidations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Natter/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Natter/com/company/OfflineLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Natter/com/company/OfflineLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Natter/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Natter/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/OfflineLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/OfflineLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/enums/FriendStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/enums/FriendStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/interfaces/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/interfaces/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/managers/ActivityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/managers/ActivityManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/managers/FriendManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/managers/FriendManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/managers/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/managers/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/managers/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/managers/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/objects/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/objects/Friend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/objects/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/objects/Activity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/objects/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/objects/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/objects/UserFriend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/objects/UserFriend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/offline/OfflineMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/offline/OfflineMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/servlets/AddActivityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/AddActivityServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/servlets/AddFriendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/AddFriendServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/servlets/ViewActivityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/ViewActivityServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/servlets/ViewFriendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servlets/ViewFriendServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/validations/FriendValidations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/validations/FriendValidations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/com/company/ActivityManagerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/company/ActivityManagerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/com/company/FriendManagerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/company/FriendManagerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/com/company/UserManagerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/com/company/UserManagerTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,30 +41,30 @@
     <session id="1695182437">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.3" value="3" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="54" />
-          <entry key="java" value="224" />
-          <entry key="xml" value="8" />
+          <entry key="class" value="99" />
+          <entry key="java" value="296" />
+          <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="54" />
-          <entry key="JAVA" value="224" />
-          <entry key="XML" value="8" />
+          <entry key="CLASS" value="99" />
+          <entry key="JAVA" value="296" />
+          <entry key="XML" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -71,17 +72,17 @@
           <entry key="JSONTemplate" value="5" />
           <entry key="class" value="7" />
           <entry key="dummy" value="143" />
-          <entry key="java" value="42999" />
+          <entry key="java" value="52538" />
           <entry key="txt" value="41" />
-          <entry key="xml" value="48" />
+          <entry key="xml" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="7" />
-          <entry key="JAVA" value="42999" />
+          <entry key="JAVA" value="52538" />
           <entry key="PLAIN_TEXT" value="189" />
-          <entry key="XML" value="48" />
+          <entry key="XML" value="74" />
         </counts>
       </usages-collector>
     </session>
@@ -89,113 +90,56 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/com/company/FriendManagerTests.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/objects/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="313" column="11" selection-start-line="313" selection-start-column="11" selection-end-line="313" selection-end-column="11" />
+            <state relative-caret-position="13">
+              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#857#1976#0" />
-                <element signature="e#2829#3254#0" />
-                <element signature="e#3260#3842#0" />
-                <element signature="e#3849#4673#0" />
-                <element signature="e#4858#5356#0" />
-                <element signature="e#5962#7843#0" />
-                <element signature="e#7849#8926#0" />
-                <element signature="e#8932#10198#0" />
-                <element signature="e#10204#10302#0" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1277#1278#0" expanded="true" />
+                <element signature="method#setPassword#0;class#User#0" />
+                <element signature="e#1403#1404#0" expanded="true" />
+                <element signature="e#1434#1435#0" expanded="true" />
+                <element signature="method#setUserName#0;class#User#0" />
+                <element signature="e#1559#1560#0" expanded="true" />
+                <element signature="e#1591#1592#0" expanded="true" />
+                <element signature="e#1641#1642#0" expanded="true" />
+                <element signature="e#1683#1684#0" expanded="true" />
+                <element signature="e#1718#1719#0" expanded="true" />
+                <element signature="e#1749#1750#0" expanded="true" />
+                <element signature="e#1797#1798#0" expanded="true" />
+                <element signature="e#1837#1838#0" expanded="true" />
+                <element signature="e#1869#1870#0" expanded="true" />
+                <element signature="e#1897#1898#0" expanded="true" />
+                <element signature="method#setEmail#0;class#User#0" />
+                <element signature="e#2105#2106#0" expanded="true" />
+                <element signature="e#2139#2140#0" expanded="true" />
+                <element signature="e#2193#2194#0" expanded="true" />
+                <element signature="e#2239#2240#0" expanded="true" />
+                <element signature="e#2278#2279#0" expanded="true" />
+                <element signature="e#2313#2314#0" expanded="true" />
+                <element signature="e#2369#2370#0" expanded="true" />
+                <element signature="e#2417#2418#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/objects/Friend.java">
+        <entry file="file://$PROJECT_DIR$/out/production/Natter/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#978#979#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/enums/FriendStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="289">
+              <caret line="29" column="44" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-425">
-              <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/offline/OfflineMethods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/managers/FriendManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="220" column="8" selection-start-line="220" selection-start-column="8" selection-end-line="220" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#isUserLoggedOn#0;class#FriendManager#0" />
-                <element signature="method#getUser#0;class#FriendManager#0" />
-                <element signature="method#createNewFriendRecord#0;class#FriendManager#0" />
-                <element signature="method#deleteFriend#0;class#FriendManager#0" />
-                <element signature="method#backup#0;class#FriendManager#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/managers/ActivityManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="769">
-              <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/managers/Manager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -203,20 +147,79 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/managers/UserManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
+            <state relative-caret-position="204">
+              <caret line="57" column="84" selection-start-line="57" selection-start-column="84" selection-end-line="57" selection-end-column="84" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/objects/UserFriend.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#902#903#0" expanded="true" />
+                <element signature="e#948#949#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#976#977#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/production/Natter/com/company/objects/User.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <folding>
+                <element signature="e#0#2957#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/mysql-connector-java-8.0.13.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/tool/schema/internal/exec/GenerationTargetToDatabase.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
               <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/validations/FriendValidations.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/objects/Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="72" column="52" selection-start-line="72" selection-start-column="52" selection-end-line="72" selection-end-column="52" />
+            <state relative-caret-position="241">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#1444#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/tool/schema/internal/AbstractSchemaMigrator.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="336" selection-start-line="336" selection-end-line="336" />
             </state>
           </provider>
         </entry>
@@ -248,13 +251,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/CreateUserServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/company/ActivityManagerbackup.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Activity.java" />
-        <option value="$PROJECT_DIR$/src/com/company/ChatManagerBackup.java" />
-        <option value="$PROJECT_DIR$/src/com/company/SimpleChatClient.java" />
-        <option value="$PROJECT_DIR$/src/com/company/VerySimpleChatServer.java" />
-        <option value="$PROJECT_DIR$/src/com/company/SimpleChatClient2.java" />
         <option value="$PROJECT_DIR$/src/com/company/ConnectClients.java" />
         <option value="$PROJECT_DIR$/src/com/company/ChatManager.java" />
         <option value="$PROJECT_DIR$/src/com/company/Chat.java" />
@@ -268,7 +264,6 @@
         <option value="$PROJECT_DIR$/src/com/company/Manager.java" />
         <option value="$PROJECT_DIR$/src/com/company/FriendManager.java" />
         <option value="$PROJECT_DIR$/src/com/company/AddFriendServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/company/objects/Activity.java" />
         <option value="$PROJECT_DIR$/src/com/company/FriendStatus.java" />
         <option value="$PROJECT_DIR$/src/com/company/LoginServlet.java" />
         <option value="$PROJECT_DIR$/tests/com/company/CreateUser.java" />
@@ -279,33 +274,41 @@
         <option value="$PROJECT_DIR$/tests/com/company/UserTests.java" />
         <option value="$PROJECT_DIR$/src/com/company/exceptions/Exceptions.java" />
         <option value="$PROJECT_DIR$/src/com/company/exceptions/NotValidLoginException.java" />
-        <option value="$PROJECT_DIR$/src/com/company/objects/UserFriend.java" />
-        <option value="$PROJECT_DIR$/src/com/company/servlets/ViewActivityServlet.java" />
         <option value="$PROJECT_DIR$/src/com/company/exceptions/NotValidUserException.java" />
-        <option value="$PROJECT_DIR$/src/com/company/objects/User.java" />
-        <option value="$PROJECT_DIR$/src/com/company/servlets/ViewFriendServlet.java" />
         <option value="$PROJECT_DIR$/src/com/company/servlets/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/com/company/OfflineLogin.java" />
         <option value="$PROJECT_DIR$/src/com/company/interfaces/Login.java" />
-        <option value="$PROJECT_DIR$/src/com/company/managers/ActivityManager.java" />
         <option value="$PROJECT_DIR$/tests/com/company/UserManagerTests.java" />
         <option value="$PROJECT_DIR$/src/com/company/exceptions/NotValidFriendException.java" />
-        <option value="$PROJECT_DIR$/src/com/company/managers/UserManager.java" />
         <option value="$PROJECT_DIR$/src/com/company/enums/FriendStatus.java" />
         <option value="$PROJECT_DIR$/src/com/company/objects/Friend.java" />
         <option value="$PROJECT_DIR$/src/com/company/servlets/AddFriendServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/company/managers/Manager.java" />
+        <option value="$PROJECT_DIR$/src/com/company/managers/FriendManagerbakcup.java" />
+        <option value="$PROJECT_DIR$/src/com/company/servlets/ViewFriendServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/company/servlets/ViewActivityServlet.java" />
         <option value="$PROJECT_DIR$/src/com/company/validations/FriendValidations.java" />
         <option value="$PROJECT_DIR$/tests/com/company/FriendManagerTests.java" />
         <option value="$PROJECT_DIR$/src/com/company/managers/FriendManager.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/validations/ActivityValidations.java" />
         <option value="$PROJECT_DIR$/src/com/company/offline/OfflineMethods.java" />
+        <option value="$PROJECT_DIR$/src/com/company/servlets/AddActivityServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/company/managers/ActivityManager.java" />
+        <option value="$PROJECT_DIR$/tests/com/company/ActivityManagerTests.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/managers/UserManager.java" />
+        <option value="$PROJECT_DIR$/out/production/Natter/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/com/company/objects/User.java" />
+        <option value="$PROJECT_DIR$/src/com/company/objects/UserFriend.java" />
+        <option value="$PROJECT_DIR$/src/com/company/objects/Activity.java" />
+        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="7" />
-    <option name="y" value="45" />
-    <option name="width" value="1346" />
+    <option name="x" value="12" />
+    <option name="y" value="49" />
+    <option name="width" value="1038" />
     <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -322,6 +325,81 @@
             <path>
               <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
               <item name="Natter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
@@ -374,6 +452,13 @@
               <item name="Natter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="offline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Natter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Natter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -398,16 +483,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/NotBackedUp/PersonalProject/Natter/src/com/company/Main.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543471326122" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/NotBackedUp/PersonalProject/Natter/tests/com/company/ActivityManagerTests.java" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543791825582" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -424,16 +509,17 @@
       <recent name="com.company" />
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\NotBackedUp\PersonalProject\Natter\src\com\company" />
-      <recent name="C:\NotBackedUp\PersonalProject\Natter\src" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.managers" />
       <recent name="com.company.exceptions" />
       <recent name="com.company" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\NotBackedUp\PersonalProject\Natter\src\com\company" />
+      <recent name="C:\NotBackedUp\PersonalProject\Natter\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -462,7 +548,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FriendManagerTests.deleteFriend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ActivityManagerTests.addActivitiesWithoutLogOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Natter" />
       <extension name="coverage">
         <pattern>
@@ -471,14 +557,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.FriendManagerTests" />
-      <option name="METHOD_NAME" value="deleteFriend" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ActivityManagerTests" />
+      <option name="METHOD_NAME" value="addActivitiesWithoutLogOn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FriendManagerTests.requestDeletedFriend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ActivityManagerTests.addActivityToFriendList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Natter" />
       <extension name="coverage">
         <pattern>
@@ -487,14 +573,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.FriendManagerTests" />
-      <option name="METHOD_NAME" value="requestDeletedFriend" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ActivityManagerTests" />
+      <option name="METHOD_NAME" value="addActivityToFriendList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FriendManagerTests.requestFriend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ActivityManagerTests.showAllActivities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Natter" />
       <extension name="coverage">
         <pattern>
@@ -503,14 +589,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.FriendManagerTests" />
-      <option name="METHOD_NAME" value="requestFriend" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ActivityManagerTests" />
+      <option name="METHOD_NAME" value="showAllActivities" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FriendManagerTests.updateStatusToAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ActivityManagerTests.viewActivitiesWithoutLogOn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Natter" />
       <extension name="coverage">
         <pattern>
@@ -519,27 +605,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.FriendManagerTests" />
-      <option name="METHOD_NAME" value="updateStatusToAdded" />
+      <option name="MAIN_CLASS_NAME" value="com.company.ActivityManagerTests" />
+      <option name="METHOD_NAME" value="viewActivitiesWithoutLogOn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FriendManagerTests.updateStatusToAdded" />
-      <item itemvalue="JUnit.FriendManagerTests.deleteFriend" />
-      <item itemvalue="JUnit.FriendManagerTests.requestDeletedFriend" />
+      <item itemvalue="JUnit.ActivityManagerTests.addActivityToFriendList" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.FriendManagerTests.requestFriend" />
+      <item itemvalue="JUnit.ActivityManagerTests.showAllActivities" />
+      <item itemvalue="JUnit.ActivityManagerTests.viewActivitiesWithoutLogOn" />
+      <item itemvalue="JUnit.ActivityManagerTests.addActivitiesWithoutLogOn" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.FriendManagerTests.requestFriend" />
-        <item itemvalue="JUnit.FriendManagerTests.updateStatusToAdded" />
-        <item itemvalue="JUnit.FriendManagerTests.requestDeletedFriend" />
-        <item itemvalue="JUnit.FriendManagerTests.deleteFriend" />
+        <item itemvalue="JUnit.ActivityManagerTests.showAllActivities" />
+        <item itemvalue="JUnit.ActivityManagerTests.addActivitiesWithoutLogOn" />
+        <item itemvalue="JUnit.ActivityManagerTests.viewActivitiesWithoutLogOn" />
+        <item itemvalue="JUnit.ActivityManagerTests.addActivityToFriendList" />
       </list>
     </recent_temporary>
   </component>
@@ -582,40 +668,56 @@
       <option name="project" value="LOCAL" />
       <updated>1543358610641</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Second commit">
+      <created>1543471415033</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543471415033</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FriendManagerTests_requestDeletedFriend - 2018.11.29 at 16h 01m 52s.xml">
-      <configuration name="FriendManagerTests.requestDeletedFriend" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_viewActivitiesWithoutLogOn - 2018.12.02 at 23h 53m 05s.xml">
+      <configuration name="ActivityManagerTests.viewActivitiesWithoutLogOn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_deleteFriend - 2018.11.29 at 16h 02m 17s.xml">
-      <configuration name="FriendManagerTests.deleteFriend" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_viewActivitiesWithoutLogOn - 2018.12.02 at 23h 53m 26s.xml">
+      <configuration name="ActivityManagerTests.viewActivitiesWithoutLogOn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_requestDeletedFriend - 2018.11.29 at 16h 02m 44s.xml">
-      <configuration name="FriendManagerTests.requestDeletedFriend" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_viewActivitiesWithoutLogOn - 2018.12.02 at 23h 53m 43s.xml">
+      <configuration name="ActivityManagerTests.viewActivitiesWithoutLogOn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_updateStatusToAdded - 2018.11.29 at 16h 03m 21s.xml">
-      <configuration name="FriendManagerTests.updateStatusToAdded" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_viewActivitiesWithoutLogOn - 2018.12.02 at 23h 54m 01s.xml">
+      <configuration name="ActivityManagerTests.viewActivitiesWithoutLogOn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_updateStatusToAdded - 2018.11.29 at 16h 03m 55s.xml">
-      <configuration name="FriendManagerTests.updateStatusToAdded" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_viewActivitiesWithoutLogOn - 2018.12.02 at 23h 54m 28s.xml">
+      <configuration name="ActivityManagerTests.viewActivitiesWithoutLogOn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_updateStatusToAdded - 2018.11.29 at 16h 04m 23s.xml">
-      <configuration name="FriendManagerTests.updateStatusToAdded" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_addActivitiesWithoutLogOn - 2018.12.02 at 23h 56m 21s.xml">
+      <configuration name="ActivityManagerTests.addActivitiesWithoutLogOn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_requestFriend - 2018.11.29 at 16h 08m 05s.xml">
-      <configuration name="FriendManagerTests.requestFriend" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_addActivitiesWithoutLogOn - 2018.12.02 at 23h 56m 48s.xml">
+      <configuration name="ActivityManagerTests.addActivitiesWithoutLogOn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_requestFriend - 2018.11.29 at 16h 08m 47s.xml">
-      <configuration name="FriendManagerTests.requestFriend" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_showAllActivities - 2018.12.02 at 23h 57m 52s.xml">
+      <configuration name="ActivityManagerTests.showAllActivities" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_requestDeletedFriend - 2018.11.29 at 16h 11m 40s.xml">
-      <configuration name="FriendManagerTests.requestDeletedFriend" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_showAllActivities - 2018.12.02 at 23h 58m 49s.xml">
+      <configuration name="ActivityManagerTests.showAllActivities" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FriendManagerTests_requestFriend - 2018.11.29 at 16h 33m 23s.xml">
-      <configuration name="FriendManagerTests.requestFriend" configurationId="JUnit" />
+    <history-entry file="ActivityManagerTests_showAllActivities - 2018.12.03 at 00h 00m 32s.xml">
+      <configuration name="ActivityManagerTests.showAllActivities" configurationId="JUnit" />
     </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -625,19 +727,19 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49858356" visible="true" weight="0.2881997" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49858356" visible="true" weight="0.2927383" />
       <window_info id="Structure" order="6" sideWeight="0.50141644" side_tool="true" weight="0.33888048" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32993197" />
-      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.36308622" weight="0.32993197" />
+      <window_info anchor="bottom" id="Messages" order="2" sideWeight="0.15885022" weight="0.32993197" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49848714" weight="0.32993197" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49924356" weight="0.32993197" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.6369138" side_tool="true" visible="true" weight="0.39965987" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.3245083" weight="0.39965987" />
+      <window_info anchor="bottom" id="Find" order="5" sideWeight="0.49621785" weight="0.32993197" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.85779124" side_tool="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.22541603" weight="0.39965987" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.14220877" visible="true" weight="0.32993197" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -687,10 +789,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/managers/UserManager.java</url>
-          <line>43</line>
+          <url>file://$PROJECT_DIR$/src/com/company/validations/FriendValidations.java</url>
+          <line>24</line>
           <properties />
-          <option name="timeStamp" value="30" />
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -701,190 +803,329 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/production/Natter/com/company/ChatManager.class" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/ConnectClients.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Chat.java">
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/jboss-logging-3.3.2.Final.jar!/org/jboss/logging/JDKLogger.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/VerySimpleChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Natter/com/company/Activity.class" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/SimpleChatClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/UserTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/ShuCommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Natter/com/company/ActivityManager.class" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/CreateUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/backup/ChatManagerBackup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/Backup.java" />
-    <entry file="file://$PROJECT_DIR$/tests/com/company/Login.java" />
-    <entry file="file://$PROJECT_DIR$/tests/com/company/ActivityManagerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="122">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3331#3332#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/UserTests.java">
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/jboss-logging-3.3.2.Final.jar!/org/jboss/logging/Logger.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="176">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/AddActivityServlet.java">
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/type/AbstractType.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        <state relative-caret-position="108">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#941#942#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/ViewActivityServlet.java">
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/tuple/AbstractAttribute.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="172">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/exceptions/NotValidUserException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/internal/SessionFactoryImpl.class">
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/internal/util/StringHelper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
-          <caret line="426" selection-start-line="426" selection-end-line="426" />
+          <caret line="411" selection-start-line="411" selection-end-line="411" />
+          <folding>
+            <element signature="e#14389#14390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/tuple/entity/AbstractEntityBasedAttribute.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#934#935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/tuple/entity/EntityBasedAssociationAttribute.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="e#2171#2172#0" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/loader/plan/build/internal/AbstractLoadPlanBuildingAssociationVisitationStrategy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="411" selection-start-line="411" selection-end-line="411" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/loader/plan/build/internal/FetchStyleLoadPlanBuildingAssociationVisitationStrategy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/loader/PropertyPath.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/event/internal/AbstractSaveEventListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/internal/SessionImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
-          <caret line="948" selection-start-line="948" selection-end-line="948" />
+          <caret line="561" selection-start-line="561" selection-end-line="561" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/junit-jupiter-api-5.3.1.jar!/org/junit/jupiter/api/Assertions.class">
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/Natter.jar!/com/company/AddUser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="237" selection-start-line="237" selection-end-line="237" />
+        <state relative-caret-position="170">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#962#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/exceptions/NotValidLoginException.java">
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/type/EntityType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="283" selection-start-line="283" selection-end-line="283" />
+          <folding>
+            <element signature="e#2776#2777#0" expanded="true" />
+            <element signature="e#2803#2804#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/metamodel/internal/MetamodelImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="524" selection-start-line="524" selection-end-line="524" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ShuCommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/managers/FriendManagerbakcup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/internal/SessionFactoryImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="1109" column="8" selection-start-line="1109" selection-start-column="8" selection-end-line="1109" selection-end-column="8" />
+          <folding>
+            <element signature="e#23384#23385#0" expanded="true" />
+            <element signature="e#23454#23455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/CreateUserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/AddFriendServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/ViewActivityServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/servlets/ViewFriendServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        <state relative-caret-position="-14">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/OfflineLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../jdk-11/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-jupiter-api-5.3.1.jar!/org/junit/jupiter/api/AssertEquals.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#5412#5413#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/interfaces/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/objects/UserFriend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../jdk-11/lib/src.zip!/java.base/java/util/function/Predicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/exceptions/NotValidFriendException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/Natter.jar!/com/company/DBManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/Natter.jar!/com/company/UserManager.class">
+    <entry file="jar://$PROJECT_DIR$/lib/junit-jupiter-api-5.3.1.jar!/org/junit/jupiter/api/Assertions.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <caret line="238" selection-start-line="238" selection-end-line="238" />
+          <folding>
+            <element signature="e#8094#8095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/objects/Friend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/validations/FriendValidations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-jupiter-api-5.3.1.jar!/org/junit/jupiter/api/AssertionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/managers/FriendManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-106">
+          <caret line="175" column="8" lean-forward="true" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#isUserLoggedOn#0;class#FriendManager#0" />
+            <element signature="docComment;method#getUser#0;class#FriendManager#0" />
+            <element signature="method#backup#0;class#FriendManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/AddActivityServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/internal/AbstractSharedSessionContract.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="363" selection-start-line="363" selection-end-line="363" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/engine/spi/SharedSessionContractImplementor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#2079#2080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/com/company/FriendManagerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/managers/ActivityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="90" column="20" lean-forward="true" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#791#867#0" />
+            <element signature="e#4379#4449#0" />
+            <element signature="e#5308#5377#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -895,131 +1136,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/objects/User.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/validations/ActivityValidations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setPassword#0;class#User#0" />
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="method#setUserName#0;class#User#0" />
-            <element signature="method#setEmail#0;class#User#0" />
-            <element signature="method#getActivityLists#0;class#User#0" />
-            <element signature="method#setActivityLists#0;class#User#0" />
-            <element signature="method#addActivity#0;class#User#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/junit-jupiter-api-5.3.1.jar!/org/junit/jupiter/api/AssertThrows.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/UserManagerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/enums/ActivityStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/cfg/Configuration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/junit-platform-commons-1.3.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="236" selection-start-line="236" selection-end-line="236" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/servlets/AddFriendServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getUser#0;class#AddFriendServlet#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/objects/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/enums/FriendStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/objects/Friend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#978#979#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/com/company/FriendManagerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="313" column="11" selection-start-line="313" selection-start-column="11" selection-end-line="313" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#857#1976#0" />
-            <element signature="e#2829#3254#0" />
-            <element signature="e#3260#3842#0" />
-            <element signature="e#3849#4673#0" />
-            <element signature="e#4858#5356#0" />
-            <element signature="e#5962#7843#0" />
-            <element signature="e#7849#8926#0" />
-            <element signature="e#8932#10198#0" />
-            <element signature="e#10204#10302#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/validations/FriendValidations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="72" column="52" selection-start-line="72" selection-start-column="52" selection-end-line="72" selection-end-column="52" />
+        <state relative-caret-position="306">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/managers/ActivityManager.java">
+    <entry file="file://$PROJECT_DIR$/tests/com/company/ActivityManagerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="769">
-          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+        <state relative-caret-position="234">
+          <caret line="64" column="92" selection-start-line="64" selection-start-column="92" selection-end-line="64" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/offline/OfflineMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="60" column="16" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#displayFriendsOfCurrentUser#0;class#OfflineMethods#0" />
+            <element signature="method#displayFriendsOfFriendUser#0;class#OfflineMethods#0" />
+            <element signature="method#addOrRequestFriend#0;class#OfflineMethods#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1610">
+          <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1028,8 +1178,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/managers/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="83">
+          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1038,43 +1188,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/managers/UserManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
+        <state relative-caret-position="204">
+          <caret line="57" column="84" selection-start-line="57" selection-start-column="84" selection-end-line="57" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/mysql-connector-java-8.0.13.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/tool/schema/internal/exec/GenerationTargetToDatabase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/managers/FriendManager.java">
+    <entry file="jar://$PROJECT_DIR$/../../apache-tomcat-9.0.13/webapps/Natter/WEB-INF/lib/hibernate-core-5.3.7.Final.jar!/org/hibernate/tool/schema/internal/AbstractSchemaMigrator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="220" column="8" selection-start-line="220" selection-start-column="8" selection-end-line="220" selection-end-column="47" />
+        <state relative-caret-position="108">
+          <caret line="336" selection-start-line="336" selection-end-line="336" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Natter/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Natter/com/company/objects/User.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#isUserLoggedOn#0;class#FriendManager#0" />
-            <element signature="method#getUser#0;class#FriendManager#0" />
-            <element signature="method#createNewFriendRecord#0;class#FriendManager#0" />
-            <element signature="method#deleteFriend#0;class#FriendManager#0" />
-            <element signature="method#backup#0;class#FriendManager#0" />
+            <element signature="e#0#2957#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/offline/OfflineMethods.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/objects/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+        <state relative-caret-position="13">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="method#setPassword#0;class#User#0" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
+            <element signature="method#setUserName#0;class#User#0" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+            <element signature="e#1683#1684#0" expanded="true" />
+            <element signature="e#1718#1719#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1837#1838#0" expanded="true" />
+            <element signature="e#1869#1870#0" expanded="true" />
+            <element signature="e#1897#1898#0" expanded="true" />
+            <element signature="method#setEmail#0;class#User#0" />
+            <element signature="e#2105#2106#0" expanded="true" />
+            <element signature="e#2139#2140#0" expanded="true" />
+            <element signature="e#2193#2194#0" expanded="true" />
+            <element signature="e#2239#2240#0" expanded="true" />
+            <element signature="e#2278#2279#0" expanded="true" />
+            <element signature="e#2313#2314#0" expanded="true" />
+            <element signature="e#2369#2370#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/objects/UserFriend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+        <state relative-caret-position="268">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/objects/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#0#1444#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>

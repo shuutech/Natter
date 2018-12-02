@@ -1,8 +1,9 @@
 package com.company;
 import com.company.managers.ActivityManager;
 import com.company.managers.FriendManager;
+import com.company.managers.UserManager;
 import com.company.offline.OfflineMethods;
-
+import com.company.enums.FriendStatus;
 import java.util.Scanner;
 import static com.company.ShuCommonUtils.check;
 
@@ -26,10 +27,11 @@ public class Main {
             System.out.println("Enter number 1 & Press Enter to - Login " +
                     "\nEnter number 2 & Press Enter to - Create New User " +
                     "\nEnter number 3 & Press Enter to - View Friends " +
-                    "\nEnter number 4 & Press Enter to - Friend Request " +
-                    "\nEnter number 5 & Press Enter to - Add a Friend " +
-                    "\nEnter number 6 & Press Enter to - View Activity  " +
-                    "\nEnter number 7 & Press Enter to - Start Activity "
+                    "\nEnter number 4 & Press Enter to - View Friend Requests " +
+                    "\nEnter number 5 & Press Enter to - Friend Request " +
+                    "\nEnter number 6 & Press Enter to - Add a Friend " +
+                    "\nEnter number 7 & Press Enter to - View Activity  " +
+                    "\nEnter number 8 & Press Enter to - Start Activity "
             );
             switch (scanner.nextLine()) {
                 case "1"://Login
@@ -55,24 +57,31 @@ public class Main {
                    phoneNumber = scanner.nextLine();
                    System.out.println("Enter location: ");
                    location = scanner.nextLine();
-                   new AddUser().addUserToDB(username,password,firstName,lastName,email,phoneNumber,location);
+                   new UserManager().addUserToDB(username,password,firstName,lastName,email,phoneNumber,location);
                    run = check(run);
                     break;
-                case "3"://Select all friends
-                   new OfflineMethods().displayFriends( username,  password);
+                case "3"://View all friends
+                   new OfflineMethods().displayFriendsOfCurrentUser( username,  password, FriendStatus.FRIENDS.friendStatus);
+                    new OfflineMethods().displayFriendsOfFriendUser( username,  password, FriendStatus.FRIENDS.friendStatus);
+
                     run = check(run);
                     break;
-                case "4"://Friend Request
+                case "4"://View all friend requests
+                    new OfflineMethods().displayFriendsOfCurrentUser( username,  password,FriendStatus.REQUESTED.friendStatus);
+                    new OfflineMethods().displayFriendsOfFriendUser( username,  password, FriendStatus.REQUESTED.friendStatus);
+                    run = check(run);
+                    break;
+                case "5"://Friend Request
 
                     System.out.println("Enter username of friend to request as a friend: ");
                      friendname = scanner.nextLine();
 
-                 new FriendManager().addOrUpdateFriend(username,password,friendname);
+                    new OfflineMethods().addOrRequestFriend(username, password, friendname)  ;
                     run = check(run);
                    break;
-                case "5"://Add Friend
+                case "6"://Add Friend
 
-                    System.out.println(new FriendManager().viewFriendRequests(username,password));
+                 new OfflineMethods().displayFriendsOfFriendUser(username,password,FriendStatus.REQUESTED.friendStatus);
 
                     System.out.println("Enter username of friend you want to add: ");
                     friendname = scanner.nextLine();
@@ -80,15 +89,15 @@ public class Main {
                   new FriendManager().addOrUpdateFriend(username,password,friendname);
                     run = check(run);
                     break;
-              case "6":// View Activities
-                  new ActivityManager().viewAvailableActivity(username);
+              case "7":// View Activities
+                  new OfflineMethods().viewActivities(username, password);
 
                     run = check(run);
                     break;
-             case "7"://Create New Activity
+             case "8"://Create New Activity
                     System.out.println("Enter Activity Name");
                     String activityName = scanner.nextLine();
-                 new ActivityManager().joinActivity(username,activityName);
+               new ActivityManager().createActivity(username,activityName,password);
                     run = check(run);
                     break;
                 case "N":

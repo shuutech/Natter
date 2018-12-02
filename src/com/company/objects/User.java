@@ -1,8 +1,17 @@
 package com.company.objects;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.ArrayList;
-
+import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+//import org.hibernate.annotations.Entity;
 @Entity
 @Table (name="USERS") //If you want to specify the field name in the database
 public class User {
@@ -20,6 +29,7 @@ public class User {
     private String userLocation;
     private String password;
     private ArrayList<String> activityLists;
+    //private List<UserFriend> userFriends = new ArrayList<>();
 
 
 
@@ -119,7 +129,7 @@ public class User {
         catch(Exception e){
             activityLists = new ArrayList<String>();
         }
-        activityLists.add(activityName);
+      //  activityLists.add(activityName);
     }
 
     @Override

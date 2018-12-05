@@ -87,12 +87,13 @@ public class Friend {
 
 
     public String toString() {
-        return "Friend{" +
-                "friendUserName='" + friendUserName + '\'' +
-                ", friendFirstName='" + friendFirstName + '\'' +
-                ", friendLastName='" + friendLastName + '\'' +
-                ", friendEmail='" + friendEmail + '\'' +
-                ", status='" + status + '\'' +
+        return "{" +
+                "\"friendUserName\":\"" + friendUserName + '\"' +
+                ", \"friendFirstName\":\"" + friendFirstName + '\"' +
+                ", \"friendLastName\":\"" + friendLastName + '\"' +
+                ", \"friendEmail\":\"" + friendEmail + '\"' +
+                ", \"status\":\"" + status + '\"' +
+                ", \"currentUserName\":\"" + currentUserName + '\"' +
                 '}';
     }
 }

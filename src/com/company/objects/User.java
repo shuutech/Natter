@@ -1,10 +1,12 @@
 package com.company.objects;
 
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import javax.persistence.CascadeType;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,10 +30,15 @@ public class User {
     private String phoneNumber;
     private String userLocation;
     private String password;
-    private ArrayList<String> activityLists;
+    private ArrayList<String> activityLists = new ArrayList<>();
     //private List<UserFriend> userFriends = new ArrayList<>();
+    @OneToMany( cascade = {CascadeType.ALL})
+   // @org.hibernate.annotations.ForeignKey(name="none")
+    private Set<UserFriend> currentSet = new HashSet<>();
 
-
+    @OneToMany(cascade = {CascadeType.ALL})
+   // @org.hibernate.annotations.ForeignKey(name="none")
+    private Set<UserFriend> friendSet = new HashSet<>();
 
 
     public User(){
@@ -46,6 +53,32 @@ public class User {
         this.email = email;
     }
 
+    public Set<UserFriend> getCurrentSet() {
+        return currentSet;
+    }
+
+    public void setCurrentSet(Set<UserFriend> currentSet) {
+        this.currentSet = currentSet;
+    }
+
+    public Set<UserFriend> getFriendSet() {
+        return friendSet;
+    }
+
+    public void setFriendSet(Set<UserFriend> friendSet) {
+        this.friendSet = friendSet;
+    }
+
+    public User(String userName, String firstName, String lastName, String email, String phoneNumber, String userLocation, String password, ArrayList<String> activityLists) {
+        this.userName = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.userLocation = userLocation;
+        this.password = password;
+        this.activityLists = activityLists;
+    }
 
     public String getPassword() {
         return password;
@@ -128,6 +161,7 @@ public class User {
         try{activityLists.add(activityName);}
         catch(Exception e){
             activityLists = new ArrayList<String>();
+            activityLists.add(activityName);
         }
       //  activityLists.add(activityName);
     }

@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.controller.Controller;
+import com.company.enums.FriendStatus;
 import com.company.exceptions.NotValidLoginException;
 import com.company.exceptions.NotValidUserException;
 import com.company.managers.Manager;
@@ -16,10 +18,9 @@ class UserManagerTests {
 
 
     @org.junit.jupiter.api.Test
-    void enteredIntoDatabase() {
-          /*
-       1. Record retrieved from database must match entered values
-      */
+    void enteredIntoDatabase() throws Exception {
+
+ new UserManager().addUserToDB("new", "new", "sdf", "sdf", "sdf", "sdf", "sdf");
     }
 
     @org.junit.jupiter.api.Test
@@ -43,5 +44,17 @@ class UserManagerTests {
             new UserManager().getUser(null).getUserName();
         });
 
+    }
+    @org.junit.jupiter.api.Test
+    void deleteUser() throws NotValidUserException{
+        new UserManager().delete("ricky");
+
+    }
+    @org.junit.jupiter.api.Test
+    void displayFriends()
+    {
+        String compare = "[{\"currentUserName\":\"tori\",\"friendUserName\":\"shu\", \"friendFirstName\":\"shu\", \"friendLastName\":\"shu\", \"friendEmail\":\"s\", \"status\":\"Friend Requested\"}]";
+        String s = new Controller().displayFriendsOfCurrentUser("tori", "tori");
+    Assertions.assertEquals(compare,s);
     }
 }

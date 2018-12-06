@@ -32,11 +32,11 @@ public class User {
     private String password;
     private ArrayList<String> activityLists = new ArrayList<>();
     //private List<UserFriend> userFriends = new ArrayList<>();
-    @OneToMany( cascade = {CascadeType.ALL})
+    @OneToMany( cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
    // @org.hibernate.annotations.ForeignKey(name="none")
     private Set<UserFriend> currentSet = new HashSet<>();
 
-    @OneToMany(cascade = {CascadeType.ALL})
+    @OneToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
    // @org.hibernate.annotations.ForeignKey(name="none")
     private Set<UserFriend> friendSet = new HashSet<>();
 

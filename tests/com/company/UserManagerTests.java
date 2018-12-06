@@ -47,11 +47,11 @@ class UserManagerTests {
     }
     @org.junit.jupiter.api.Test
     void deleteUser() throws NotValidUserException{
-        new UserManager().delete("ricky");
+        new UserManager().delete("christy");
 
     }
     @org.junit.jupiter.api.Test
-    void displayFriends()
+    void displayFriends() throws NotValidLoginException
     {
         String compare = "[{\"currentUserName\":\"tori\",\"friendUserName\":\"shu\", \"friendFirstName\":\"shu\", \"friendLastName\":\"shu\", \"friendEmail\":\"s\", \"status\":\"Friend Requested\"}]";
         String s = new Controller().displayFriendsOfCurrentUser("tori", "tori");

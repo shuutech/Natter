@@ -199,6 +199,64 @@ public class FriendManager extends Manager implements Login {
 
     }
 
+    public ArrayList<Friend> friendsByStatus(String currentUser, String status) {
+
+        ArrayList<Friend> friendArray = new ArrayList<>();
+        Session session = super.openSession();
+        List<UserFriend> list = session
+                .createQuery(
+                        "from UserFriend where currentUser.userName =(:currentUser) and status=(:status)")
+                .setParameter("currentUser", currentUser)
+                .setParameter("status", status)
+                .getResultList();
+
+        list.forEach((UserFriend userFriend) ->
+        {
+            /*
+            As we are searching through the friend user column for the user and getting the Current user,
+             */
+            friendArray.add(new Friend(
+                    userFriend.getFriendUser().getUserName(),
+                    userFriend.getFriendUser().getFirstName(),
+                    userFriend.getFriendUser().getLastName(),
+                    userFriend.getFriendUser().getEmail(),
+                    userFriend.getStatus(),
+                    userFriend.getCurrentUser().getUserName()));
+        });
+        session.close();
+        return friendArray;
+
+    }
+
+    public ArrayList<Friend> viewFriendsByStatus(String friendUser, String status) {
+
+        ArrayList<Friend> friendArray = new ArrayList<>();
+        Session session = super.openSession();
+        List<UserFriend> list = session
+                .createQuery(
+                        "from UserFriend where friendUser.userName =(:friendUser) and status=(:status)")
+                .setParameter("friendUser", friendUser)
+                .setParameter("status", status)
+                .getResultList();
+
+        list.forEach((UserFriend userFriend) ->
+        {
+            /*
+            As we are searching through the friend user column for the user and getting the Current user,
+             */
+            friendArray.add(new Friend(
+                    userFriend.getCurrentUser().getUserName(),
+                    userFriend.getCurrentUser().getFirstName(),
+                    userFriend.getCurrentUser().getLastName(),
+                    userFriend.getCurrentUser().getEmail(),
+                    userFriend.getStatus(),
+                    userFriend.getFriendUser().getUserName()));
+        });
+        session.close();
+        return friendArray;
+
+    }
+
     public String backup(String currentUser) {
         String output;
         ArrayList<String> buildString = new ArrayList<>();

@@ -38,21 +38,28 @@ class ActivityManagerTests {
     }
 
     @Test
-    void addActivityToFriendList() throws NotValidLoginException {
+    void addActivityToFriendList() throws Exception {
+
         ActivityManager activityManager = new ActivityManager();
-       activityManager.createActivity("torinado", "succcess", "torinado");
+        activityManager.createActivity("henry", "henry", "henry");
         ArrayList<String> activity = new ArrayList<>();
-        activity.add("succcess");
+        activity.add("eating");
 
-       Assertions.assertEquals(activity, activityManager.viewAvailableActivity("torinado"));
-
-        ActivityManager activityManager1 = new ActivityManager();
-        activityManager1.createActivity("shu", "yay", "shu");
-        ArrayList<String> activity1 = new ArrayList<>();
-        activity1.add("succcess");
-        activity1.add("yay");
-
-        Assertions.assertEquals(activity1, activityManager1.viewAvailableActivity("shu"));
+        Assertions.assertEquals(activity, activityManager.viewAvailableActivity("henry"));
+//        ActivityManager activityManager = new ActivityManager();
+//       activityManager.createActivity("torinado", "succcess", "torinado");
+//        ArrayList<String> activity = new ArrayList<>();
+//        activity.add("succcess");
+//
+//       Assertions.assertEquals(activity, activityManager.viewAvailableActivity("torinado"));
+//
+//        ActivityManager activityManager1 = new ActivityManager();
+//        activityManager1.createActivity("shu", "yay", "shu");
+//        ArrayList<String> activity1 = new ArrayList<>();
+//        activity1.add("succcess");
+//        activity1.add("yay");
+//
+//        Assertions.assertEquals(activity1, activityManager1.viewAvailableActivity("shu"));
     }
     @Test
     void showAllActivities() {

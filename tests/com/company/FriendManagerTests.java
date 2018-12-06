@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.controller.Controller;
+import com.company.enums.FriendStatus;
 import com.company.exceptions.NotValidLoginException;
 import com.company.exceptions.NotValidUserException;
 import com.company.managers.FriendManager;
@@ -11,7 +13,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import com.company.enums.FriendStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,42 @@ class FriendManagerTests {
         });
 
     }
+
+    @org.junit.jupiter.api.Test
+    void viewFriendsByStatus() {
+        String s = null;
+        FriendManager friendManager = new FriendManager();
+        ArrayList<Friend> friends = friendManager.viewFriendsByStatus("tori", FriendStatus.REQUESTED.friendStatus);
+        for (Friend f: friends){
+
+            s = f.getCurrentUserName() + f.getStatus();
+
+        }
+        Assertions.assertEquals("rickyFriend Requested",s);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void viewMoreFriendsByStatus() {
+        String s = null;
+        FriendManager friendManager = new FriendManager();
+        ArrayList<Friend> friends = friendManager.viewFriendsByStatus("ricky", FriendStatus.REQUESTED.friendStatus);
+        for (Friend f: friends){
+
+            s = f.getCurrentUserName() + f.getStatus();
+
+        }
+        Assertions.assertEquals("rickyFriend Requested",s);
+
+    }
+
+    @org.junit.jupiter.api.Test
+    void displayAllFriends() throws NotValidLoginException {
+       new Controller().displayFriendsOfCurrentUser("tori", "tori");
+        Assertions.assertEquals("rick",new Controller().displayFriendsOfCurrentUser("tori", "tori"));
+    }
+
+
 
     @org.junit.jupiter.api.Test
     void requestFriendWithoutLogOn() {

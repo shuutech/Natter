@@ -1,6 +1,9 @@
 package com.company.objects;
 
 
+import com.company.exceptions.*;
+import com.company.validations.UserValidations;
+
 import javax.persistence.*;
 import javax.persistence.CascadeType;
 import java.util.ArrayList;
@@ -23,13 +26,24 @@ public class User {
     @Id
     private String userName;
 
-    private String firstName;
-    private String lastName;
     @Column(nullable = false)
+    private String firstName;
+
+    @Column(nullable = false)
+    private String lastName;
+
+    @Column(nullable = false, unique = true)
     private String email;
+
+    @Column(nullable = false, unique = true)
     private String phoneNumber;
+
+    @Column(nullable = false)
     private String userLocation;
+
+    @Column(nullable = false)
     private String password;
+
     private ArrayList<String> activityLists = new ArrayList<>();
     //private List<UserFriend> userFriends = new ArrayList<>();
     @OneToMany( cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
@@ -81,13 +95,15 @@ public class User {
     }
 
     public String getPassword() {
+
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password) throws NotValidPassword {
 
-
-        this.password = password;
+        if (UserValidations.validPassword(password)) {
+            this.password = password;
+        }
     }
 
 
@@ -95,9 +111,11 @@ public class User {
         return userName;
     }
 
-    public void setUserName(String userName){
-
-        this.userName = userName;
+    public void setUserName(String userName) throws NotValidUserName
+    {
+        if (UserValidations.validUserName(userName)) {
+            this.userName = userName;
+        }
 
     }
 
@@ -105,46 +123,51 @@ public class User {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstName(String firstName) throws NotValidFirstName {
+        if (UserValidations.validFirstName(firstName)) {
+            this.firstName = firstName;
+        }
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String lastName) throws NotValidLastName {
+        if (UserValidations.validLastName(lastName)) {
+            this.lastName = lastName;
+        }
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) throws Exception{
+    public void setEmail(String email) throws NotValidEmail {
 
-        if (email.isEmpty()){
-            throw new Exception();
+        if (UserValidations.validEmail(email)) {
+            this.email = email;
         }
-
-        this.email = email;
-
     }
 
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String phoneNumber) throws NotValidPhone {
+        if (UserValidations.validPhone(phoneNumber)) {
+            this.phoneNumber = phoneNumber;
+        }
     }
 
     public String getUserLocation() {
         return userLocation;
     }
 
-    public void setUserLocation(String userLocation) {
-        this.userLocation = userLocation;
+    public void setUserLocation(String userLocation) throws NotValidLocation{
+        if (UserValidations.validLocation(userLocation)) {
+            this.userLocation = userLocation;
+        }
     }
 
     public ArrayList<String> getActivityLists() {
@@ -163,7 +186,6 @@ public class User {
             activityLists = new ArrayList<String>();
             activityLists.add(activityName);
         }
-      //  activityLists.add(activityName);
     }
 
     @Override

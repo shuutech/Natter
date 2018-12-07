@@ -2,6 +2,7 @@ package com.company.servlets;
 
 
 import com.company.enums.FriendStatus;
+import com.company.exceptions.*;
 import com.company.managers.ActivityManager;
 import com.company.managers.FriendManager;
 import com.company.managers.UserManager;
@@ -51,28 +52,6 @@ public class LoginServletController {
         }
         return viewToReturn;
     }
-
-//    @RequestMapping(value = "/createUser", produces ="application/json")
-//    public ResponseEntity<User> addUser(HttpServletRequest request) {
-//        User user = new User();
-//        String username = request.getParameter("userName");
-//        String password = request.getParameter("password");
-//        String firstName = request.getParameter("firstName");
-//        String lastName = request.getParameter("lastName");
-//        String email = request.getParameter("email");
-//        String phoneNumber = request.getParameter("phone");
-//        String location = request.getParameter("userLocation");
-//        try{
-//            UserManager userManager = new UserManager();
-//            userManager.addUserToDB(username, password, firstName, lastName, email, phoneNumber, location);
-//            user = userManager.getUser(username);
-//        }
-//        catch (Exception e){
-//            e.printStackTrace();
-//        }
-//
-//        return new ResponseEntity<User>(user, HttpStatus.ACCEPTED);
-//    }
 
 
     @RequestMapping(value = "/viewfriend")
@@ -140,9 +119,36 @@ public class LoginServletController {
             userManager.addUserToDB(username, password, firstName, lastName, email, phoneNumber, location);
             User user = userManager.getUser(username);
             viewToReturn = new ModelAndView("createUser", "user", user);
-        } catch (Exception e) {
+        } catch (UserExistsException e) {
+            e.printStackTrace();
+            viewToReturn = new ModelAndView("userExists");
+        } catch (NotValidUserName e) {
+            String error = e.getMessage();
+            viewToReturn = new ModelAndView("userNotSaved", "error", error);
+        } catch (NotValidPassword e) {
+            String error = e.getMessage();
+            viewToReturn = new ModelAndView("userNotSaved", "error", error);
+        } catch (NotValidFirstName e) {
+            String error = e.getMessage();
+            viewToReturn = new ModelAndView("userNotSaved", "error", error);
+        } catch (NotValidLastName e) {
+            String error = e.getMessage();
+            viewToReturn = new ModelAndView("userNotSaved", "error", error);
+        } catch (NotValidPhone e) {
+            String error = e.getMessage();
+            viewToReturn = new ModelAndView("userNotSaved", "error", error);
+        } catch (NotValidEmail e) {
+            String error = e.getMessage();
+            viewToReturn = new ModelAndView("userNotSaved", "error", error);
+        } catch (NotValidLocation e) {
+            String error = e.getMessage();
+            viewToReturn = new ModelAndView("userNotSaved", "error", error);
+        } catch (NotValidUserException e) {
             e.printStackTrace();
             viewToReturn = new ModelAndView("notLoggedIn");
+        } catch (Exception e) {
+            String error = e.getMessage();
+            viewToReturn = new ModelAndView("userNotSaved", "error", error);
         }
 
         return viewToReturn;
@@ -168,8 +174,12 @@ public class LoginServletController {
             com.company.controller.Controller controller = new com.company.controller.Controller();
             String friends = controller.displayFriendRequests(currentUser, password);
             viewToReturn = new ModelAndView("viewFriendRequests", "friends", friends);
+        } catch (NotValidLoginException e) {
+            viewToReturn = new ModelAndView("notLoggedIn");
+
         } catch (
                 Exception e) {
+            e.getStackTrace();
             viewToReturn = new ModelAndView("friendNotExist");
 
         }
@@ -196,8 +206,10 @@ public class LoginServletController {
             com.company.controller.Controller controller = new com.company.controller.Controller();
             String friends = controller.displayFriendsOfCurrentUser(currentUser, password);
             viewToReturn = new ModelAndView("viewFriends", "friends", friends);
-        } catch (
-                Exception e) {
+        } catch (NotValidLoginException e) {
+            viewToReturn = new ModelAndView("notLoggedIn");
+
+        } catch (Exception e) {
             viewToReturn = new ModelAndView("friendNotExist");
 
         }

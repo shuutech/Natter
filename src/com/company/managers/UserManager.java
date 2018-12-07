@@ -1,7 +1,6 @@
 package com.company.managers;
 
-import com.company.exceptions.NotValidLoginException;
-import com.company.exceptions.NotValidUserException;
+import com.company.exceptions.*;
 import com.company.interfaces.Login;
 import com.company.objects.User;
 import com.company.objects.UserFriend;
@@ -56,28 +55,42 @@ public class UserManager extends Manager implements Login {
     }
 
 
-    public void addUserToDB(String username, String password, String firstName, String lastName, String email, String phoneNumber, String location) throws Exception {
-        User user = new User();
-        user.setUserName(username);
-        user.setPassword(password);
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        user.setEmail(email);
-        user.setPhoneNumber(phoneNumber);
-        user.setUserLocation(location);
+    public void addUserToDB(String username,
+                            String password,
+                            String firstName,
+                            String lastName,
+                            String email,
+                            String phoneNumber,
+                            String location) throws UserExistsException,
+            NotValidLocation, NotValidUserName, NotValidFirstName, NotValidLastName, NotValidEmail, NotValidPassword, NotValidPhone {
 
-        SessionFactory sessionFactory = super.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        //Begins a transaction
-        session.beginTransaction();
-        //Saves the Customer789 object in the DB
-        session.saveOrUpdate(user);
-        // session.save(user);
-        //Commits the transaction in the DB
-        session.getTransaction().commit();
-        //  System.exit(0);
-        session.close();
+        try{
+            User user = getUser(username);
+            throw new UserExistsException("User cannot be added");
 
+        }catch(NotValidUserException e) {
+
+            User user = new User();
+            user.setUserName(username);
+            user.setPassword(password);
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            user.setEmail(email);
+            user.setPhoneNumber(phoneNumber);
+            user.setUserLocation(location);
+
+            SessionFactory sessionFactory = super.getSessionFactory();
+            Session session = sessionFactory.openSession();
+            //Begins a transaction
+            session.beginTransaction();
+            //Saves the Customer789 object in the DB
+            session.saveOrUpdate(user);
+            // session.save(user);
+            //Commits the transaction in the DB
+            session.getTransaction().commit();
+            //  System.exit(0);
+            session.close();
+        }
     }
 
     public void delete(String username) throws NotValidUserException {

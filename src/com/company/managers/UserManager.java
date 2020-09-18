@@ -37,7 +37,7 @@ public class UserManager extends Manager implements Login {
         session.close();
         return loggedOn;
     }
-
+//This obtains a user
     public User getUser(String username) throws NotValidUserException {
         SessionFactory sessionFactory = super.getSessionFactory();
         Session session = sessionFactory.openSession();
